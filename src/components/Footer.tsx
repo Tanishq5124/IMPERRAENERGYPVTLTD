@@ -68,11 +68,11 @@ export const Footer = () => {
               </li>
               <li class="flex items-center gap-3">
                 <i class="fas fa-phone text-solar-green"></i>
-                <a href="tel:+919876543210" class="text-gray-400 hover:text-solar-green transition-colors">+91 98765 43210</a>
+                <a href="tel:+919558360879" class="text-gray-400 hover:text-solar-green transition-colors">+91 95583 60879</a>
               </li>
               <li class="flex items-center gap-3">
                 <i class="fas fa-envelope text-solar-green"></i>
-                <a href="mailto:info@imperraenergy.com" class="text-gray-400 hover:text-solar-green transition-colors">info@imperraenergy.com</a>
+                <a href="mailto:imperraenergypvtltd@gmail.com" class="text-gray-400 hover:text-solar-green transition-colors">imperraenergypvtltd@gmail.com</a>
               </li>
             </ul>
           </div>

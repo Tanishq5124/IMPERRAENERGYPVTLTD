@@ -84,7 +84,7 @@ export const ContactPage = () => {
                     <input
                       type="tel"
                       name="phone"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 95583 60879"
                       class="w-full px-4 py-4 bg-bg-light border border-gray-200 rounded-xl focus:ring-2 focus:ring-solar-green focus:border-solar-green transition-all text-text-main"
                       required
                     />
@@ -179,8 +179,7 @@ export const ContactPage = () => {
                     <div>
                       <h4 class="font-semibold text-primary mb-1">Phone</h4>
                       <p class="text-text-muted">
-                        <a href="tel:+919876543210" class="hover:text-solar-green transition-colors">+91 98765 43210</a><br />
-                        <a href="tel:+919876543211" class="hover:text-solar-green transition-colors">+91 98765 43211</a>
+                        <a href="tel:+919558360879" class="hover:text-solar-green transition-colors">+91 95583 60879</a>
                       </p>
                     </div>
                   </div>
@@ -192,8 +191,7 @@ export const ContactPage = () => {
                     <div>
                       <h4 class="font-semibold text-primary mb-1">Email</h4>
                       <p class="text-text-muted">
-                        <a href="mailto:info@imperraenergy.com" class="hover:text-solar-green transition-colors">info@imperraenergy.com</a><br />
-                        <a href="mailto:sales@imperraenergy.com" class="hover:text-solar-green transition-colors">sales@imperraenergy.com</a>
+                        <a href="mailto:imperraenergypvtltd@gmail.com" class="hover:text-solar-green transition-colors">imperraenergypvtltd@gmail.com</a>
                       </p>
                     </div>
                   </div>
@@ -234,12 +232,12 @@ export const ContactPage = () => {
 
               {/* Quick Contact Options */}
               <div class="grid grid-cols-2 gap-4">
-                <a href="tel:+919876543210" class="bg-gradient-to-br from-solar-green to-highlight-green rounded-2xl p-6 text-center text-primary hover:shadow-xl transition-all">
+                <a href="tel:+919558360879" class="bg-gradient-to-br from-solar-green to-highlight-green rounded-2xl p-6 text-center text-primary hover:shadow-xl transition-all">
                   <i class="fas fa-phone text-3xl mb-3"></i>
                   <div class="font-semibold">Call Now</div>
                   <div class="text-sm opacity-80">Quick response</div>
                 </a>
-                <a href="https://wa.me/919876543210" class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-6 text-center text-white hover:shadow-xl transition-all">
+                <a href="https://wa.me/919558360879" class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-6 text-center text-white hover:shadow-xl transition-all">
                   <i class="fab fa-whatsapp text-3xl mb-3"></i>
                   <div class="font-semibold">WhatsApp</div>
                   <div class="text-sm opacity-80">Chat with us</div>
@@ -328,7 +326,7 @@ export const ContactPage = () => {
               <i class="fas fa-calculator"></i>
               Try Solar Calculator
             </a>
-            <a href="tel:+919876543210" class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/10 backdrop-blur-sm text-white font-semibold text-lg rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <a href="tel:+919558360879" class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/10 backdrop-blur-sm text-white font-semibold text-lg rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
               <i class="fas fa-phone"></i>
               Talk to Expert
             </a>

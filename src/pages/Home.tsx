@@ -643,7 +643,7 @@ export const HomePage = () => {
               Get Started Today
               <i class="fas fa-arrow-right"></i>
             </a>
-            <a href="tel:+919876543210" class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/10 backdrop-blur-sm text-white font-semibold text-lg rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <a href="tel:+919558360879" class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/10 backdrop-blur-sm text-white font-semibold text-lg rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
               <i class="fas fa-phone"></i>
               Call Us Now
             </a>
