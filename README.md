@@ -6,12 +6,21 @@ A modern, premium corporate website for Imperra Energy, a renewable energy compa
 
 - **Name**: Imperra Energy Website
 - **Goal**: Build a premium, trustworthy corporate website similar to global energy firms
-- **Tech Stack**: Hono (TypeScript), Tailwind CSS, Cloudflare Pages
+- **Tech Stack**: Hono (TypeScript), Tailwind CSS (locally built), Cloudflare Pages
 - **Status**: ✅ Complete and deployed
+- **Last Updated**: January 28, 2026
+
+## Contact Information
+
+- **Phone**: +91 9558360879
+- **Email**: imperraenergypvtltd@gmail.com
+- **WhatsApp**: [Chat with us](https://wa.me/919558360879)
+- **Address**: Ring Road, Surat, Gujarat - 395002, India
 
 ## Live URLs
 
 - **Development**: https://3000-io9uqhhts737jpuxrd4e4-ad490db5.sandbox.novita.ai
+- **GitHub**: https://github.com/Tanishq5124/IMPERRAENERGYPVTLTD
 - **Production**: (Deploy to Cloudflare Pages using `npm run deploy`)
 
 ## Features
@@ -39,9 +48,23 @@ A modern, premium corporate website for Imperra Energy, a renewable energy compa
 - **Blog**: Article listing, category filters, newsletter signup
 - **Contact**: Contact form, office info, FAQ section
 
+#### Mobile Features
+- **Sticky Mobile CTA Bar**: Fixed bottom bar with Call and WhatsApp buttons
+- **Mobile Menu**: Smooth open/close animations with touch support
+- **Tap Targets**: Minimum 48px height for all interactive elements
+- **Form Inputs**: Prevent zoom on focus, proper sizing
+- **Lazy Loading**: Images load on scroll for better performance
+
 #### API Endpoints
 - `POST /api/calculate-savings` - Solar savings calculator
 - `POST /api/contact` - Contact form submission
+
+#### SEO & Performance
+- **Schema.org Structured Data**: Organization and LocalBusiness schemas
+- **Google Fonts Preconnect**: Faster font loading
+- **Font Awesome CDN with Preconnect**: Optimized icon loading
+- **Local Tailwind CSS**: Built locally instead of CDN for better performance
+- **Minified CSS/JS**: Smaller file sizes
 
 ### Brand Colors
 - Primary Blue: `#0B2A45`
@@ -57,6 +80,7 @@ webapp/
 ├── src/
 │   ├── index.tsx            # Main Hono app with routes & API
 │   ├── renderer.tsx         # JSX renderer with SEO meta tags
+│   ├── input.css            # Tailwind CSS input file
 │   ├── components/
 │   │   ├── Header.tsx       # Navigation header
 │   │   └── Footer.tsx       # Site footer
@@ -70,10 +94,13 @@ webapp/
 │       └── Contact.tsx      # Contact page
 ├── public/
 │   └── static/
+│       ├── tailwind.css     # Built Tailwind CSS
 │       ├── style.css        # Custom CSS animations
 │       └── app.js           # Client-side JavaScript
 ├── dist/                    # Build output
 ├── ecosystem.config.cjs     # PM2 configuration
+├── tailwind.config.js       # Tailwind configuration
+├── postcss.config.js        # PostCSS configuration
 ├── wrangler.jsonc           # Cloudflare config
 ├── vite.config.ts           # Vite configuration
 ├── tsconfig.json            # TypeScript config
@@ -87,11 +114,11 @@ webapp/
 # Install dependencies
 npm install
 
+# Build CSS
+npm run build:css
+
 # Build the project
 npm run build
-
-# Copy static files
-mkdir -p dist/static && cp -r public/static/* dist/static/
 
 # Start development server
 npm run preview
@@ -146,7 +173,7 @@ Content-Type: application/json
   "name": "John Doe",
   "company": "ABC Corp",
   "email": "john@example.com",
-  "phone": "+91 98765 43210",
+  "phone": "+91 9558360879",
   "requirement": "Solar installation inquiry"
 }
 ```
@@ -168,27 +195,37 @@ Content-Type: application/json
 - Card hover effects with glow
 - Toast notifications
 - FAQ accordion
-- Mobile hamburger menu
+- Mobile hamburger menu with smooth transitions
+- Sticky mobile CTA bar
+- Safe area support for notched devices
 
 ## Technologies Used
 - **Framework**: Hono (TypeScript)
-- **Styling**: Tailwind CSS (CDN)
+- **Styling**: Tailwind CSS 3.x (locally built)
 - **Icons**: Font Awesome 6
 - **Fonts**: Inter (sans-serif), Playfair Display (display)
 - **Build**: Vite
 - **Deployment**: Cloudflare Pages
 - **Process Manager**: PM2
 
+## Accessibility Features
+- Reduced motion support
+- Proper focus indicators
+- Skip link for keyboard navigation
+- Semantic HTML structure
+- ARIA labels on interactive elements
+
 ## Next Steps for Development
 1. Add real client logos/images
 2. Integrate with CRM for contact form submissions
 3. Add Google Analytics tracking
-4. Implement real blog CMS (Sanity.io)
-5. Add more project case studies with real images
-6. Implement client testimonials
-7. Add pricing calculator refinements
-8. SEO optimization with structured data
+4. Add reCAPTCHA to forms
+5. Implement real blog CMS (Sanity.io)
+6. Add more project case studies with real images
+7. Implement client testimonials
+8. Add email notification system
+9. Enable Cloudflare Brotli/Gzip compression
 
 ---
 
-© 2024 Imperra Energy Pvt. Ltd. All rights reserved.
+© 2026 Imperra Energy Pvt. Ltd. All rights reserved.
