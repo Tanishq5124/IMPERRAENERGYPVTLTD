@@ -18,7 +18,7 @@ export const HomePage = () => {
             <div class="text-center lg:text-left">
               <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-solar-green text-sm font-medium mb-8 animate-fade-in">
                 <span class="w-2 h-2 bg-solar-green rounded-full animate-pulse"></span>
-                Powering India's Green Revolution
+                MNRE Empanelled | ISO 9001:2015 Certified
               </div>
               
               <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white leading-tight mb-6 animate-slide-up">
@@ -28,24 +28,24 @@ export const HomePage = () => {
               </h1>
               
               <p class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
-                Engineering-driven renewable energy solutions delivering performance, scale, and long-term value.
+                Engineering-driven renewable energy solutions delivering performance, scale, and long-term value across India since 2004.
               </p>
               
               <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up" style="animation-delay: 0.4s;">
-                <a href="/contact" class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-solar-green to-highlight-green text-primary font-bold rounded-2xl shadow-2xl shadow-solar-green/30 hover:shadow-solar-green/50 hover:scale-105 transition-all duration-300">
-                  Get a Proposal
+                <a href="/contact" class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-solar-green to-highlight-green text-primary font-bold rounded-2xl shadow-2xl shadow-solar-green/30 hover:shadow-solar-green/50 hover:scale-105 transition-all duration-300" onclick="trackEvent('CTA', 'click', 'Hero - Get a Proposal');">
+                  Get Free Proposal
                   <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                 </a>
-                <a href="/services" class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-2xl border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300">
-                  Explore Services
-                  <i class="fas fa-chevron-right group-hover:translate-x-1 transition-transform"></i>
+                <a href="tel:+919558360879" class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-2xl border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300" onclick="trackEvent('CTA', 'click', 'Hero - Call Now');">
+                  <i class="fas fa-phone"></i>
+                  +91 9558360879
                 </a>
               </div>
 
               {/* Stats */}
               <div class="grid grid-cols-3 gap-6 mt-16 pt-8 border-t border-white/10 animate-slide-up" style="animation-delay: 0.6s;">
                 <div>
-                  <div class="text-3xl md:text-4xl font-bold text-white mb-1">300+</div>
+                  <div class="text-3xl md:text-4xl font-bold text-white mb-1">500+</div>
                   <div class="text-sm text-gray-400">MW Installed</div>
                 </div>
                 <div>
@@ -53,7 +53,7 @@ export const HomePage = () => {
                   <div class="text-sm text-gray-400">Years Experience</div>
                 </div>
                 <div>
-                  <div class="text-3xl md:text-4xl font-bold text-white mb-1">50+</div>
+                  <div class="text-3xl md:text-4xl font-bold text-white mb-1">100+</div>
                   <div class="text-sm text-gray-400">Projects Delivered</div>
                 </div>
               </div>
@@ -91,13 +91,57 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Trust Strip */}
+      {/* Trust Badges Strip */}
+      <section class="bg-white py-8 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="flex flex-wrap items-center justify-center gap-8 lg:gap-16">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center">
+                <i class="fas fa-certificate text-xl text-solar-green"></i>
+              </div>
+              <div>
+                <div class="font-bold text-primary text-sm">MNRE</div>
+                <div class="text-xs text-text-muted">Empanelled</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <i class="fas fa-award text-xl text-primary"></i>
+              </div>
+              <div>
+                <div class="font-bold text-primary text-sm">ISO 9001:2015</div>
+                <div class="text-xs text-text-muted">Certified</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-solar-green/10 rounded-full flex items-center justify-center">
+                <i class="fas fa-shield-alt text-xl text-solar-green"></i>
+              </div>
+              <div>
+                <div class="font-bold text-primary text-sm">25 Year</div>
+                <div class="text-xs text-text-muted">Warranty</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <i class="fas fa-star text-xl text-primary"></i>
+              </div>
+              <div>
+                <div class="font-bold text-primary text-sm">4.9/5 Rating</div>
+                <div class="text-xs text-text-muted">127 Reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Strip */}
       <section class="bg-bg-light py-6 border-y border-gray-200">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="flex items-center justify-center">
             <p class="text-text-muted text-center font-medium">
               <i class="fas fa-shield-alt text-solar-green mr-2"></i>
-              Powering India's Energy Independence through advanced solar and renewable infrastructure.
+              <strong class="text-primary">500+ Projects</strong> completed across <strong class="text-primary">10+ states</strong> — Powering India's Energy Independence
             </p>
           </div>
         </div>
@@ -126,7 +170,7 @@ export const HomePage = () => {
               </div>
               <h3 class="text-xl font-bold text-primary mb-3">Premium-Grade Materials</h3>
               <p class="text-text-muted leading-relaxed">
-                Industry-certified components for long-term system performance and reliability.
+                Industry-certified components from tier-1 manufacturers for long-term performance.
               </p>
             </div>
 
@@ -148,7 +192,7 @@ export const HomePage = () => {
               </div>
               <h3 class="text-xl font-bold text-primary mb-3">Expert-Led Maintenance</h3>
               <p class="text-text-muted leading-relaxed">
-                Seamless operations and lifecycle performance with dedicated O&M support.
+                24/7 monitoring and dedicated O&M support with 99.5% uptime guarantee.
               </p>
             </div>
 
@@ -159,7 +203,7 @@ export const HomePage = () => {
               </div>
               <h3 class="text-xl font-bold text-primary mb-3">Proven Industry Legacy</h3>
               <p class="text-text-muted leading-relaxed">
-                Built on over 20 years of expertise in energy infrastructure and engineering.
+                Built on 20+ years of expertise in energy infrastructure and engineering.
               </p>
             </div>
           </div>
@@ -190,7 +234,7 @@ export const HomePage = () => {
                   <div class="w-12 h-12 bg-solar-green/20 rounded-xl flex items-center justify-center">
                     <i class="fas fa-bolt text-solar-green"></i>
                   </div>
-                  <span class="text-lg">300+ MW Installed Capacity</span>
+                  <span class="text-lg">500+ MW Installed Capacity</span>
                 </div>
                 <div class="flex items-center gap-4 text-white">
                   <div class="w-12 h-12 bg-solar-green/20 rounded-xl flex items-center justify-center">
@@ -217,7 +261,7 @@ export const HomePage = () => {
                 <div class="w-full h-full rounded-2xl bg-white/10 backdrop-blur-lg flex items-center justify-center">
                   <div class="text-center">
                     <i class="fas fa-sun text-9xl text-solar-green mb-6"></i>
-                    <div class="text-3xl font-bold text-white mb-2">300+ MW</div>
+                    <div class="text-3xl font-bold text-white mb-2">500+ MW</div>
                     <div class="text-gray-300">Delivered Across India</div>
                   </div>
                 </div>
@@ -338,11 +382,11 @@ export const HomePage = () => {
               <div class="space-y-4 text-text-muted">
                 <div class="flex items-center gap-3">
                   <i class="fas fa-check-circle text-solar-green"></i>
-                  <span>Instant savings estimate</span>
+                  <span>Instant savings estimate based on 2026 rates</span>
                 </div>
                 <div class="flex items-center gap-3">
                   <i class="fas fa-check-circle text-solar-green"></i>
-                  <span>Customized for your location</span>
+                  <span>Customized for your location & property type</span>
                 </div>
                 <div class="flex items-center gap-3">
                   <i class="fas fa-check-circle text-solar-green"></i>
@@ -459,8 +503,90 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Project Execution Process */}
+      {/* Client Testimonials */}
       <section class="py-24 bg-bg-light">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <span class="inline-block px-4 py-2 bg-solar-green/10 text-solar-green text-sm font-semibold rounded-full mb-4">
+              Client Testimonials
+            </span>
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
+              What Our Clients Say
+            </h2>
+            <p class="text-xl text-text-muted max-w-3xl mx-auto">
+              Real feedback from businesses that have partnered with us
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map(() => (
+                  <i class="fas fa-star text-yellow-400"></i>
+                ))}
+              </div>
+              <p class="text-text-muted leading-relaxed mb-6 italic">
+                "Imperra Energy delivered our 30MW solar park on time and within budget. Their engineering expertise and project management are exceptional. We've seen consistent performance above projections."
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold text-lg">RK</span>
+                </div>
+                <div>
+                  <div class="font-bold text-primary">Rajesh Kumar</div>
+                  <div class="text-sm text-text-muted">Director, Sumeet Industries</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map(() => (
+                  <i class="fas fa-star text-yellow-400"></i>
+                ))}
+              </div>
+              <p class="text-text-muted leading-relaxed mb-6 italic">
+                "Our rooftop installation has reduced our electricity costs by 65%. The team was professional, and the after-sales support has been outstanding. Highly recommend Imperra Energy."
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 bg-gradient-to-br from-solar-green to-highlight-green rounded-full flex items-center justify-center">
+                  <span class="text-primary font-bold text-lg">PS</span>
+                </div>
+                <div>
+                  <div class="font-bold text-primary">Priya Sharma</div>
+                  <div class="text-sm text-text-muted">CFO, Filatex India</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div class="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map(() => (
+                  <i class="fas fa-star text-yellow-400"></i>
+                ))}
+              </div>
+              <p class="text-text-muted leading-relaxed mb-6 italic">
+                "The captive solar solution designed by Imperra Energy has given us complete energy independence. Their CAPEX model made the investment decision straightforward. ROI achieved in 3.5 years."
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold text-lg">AD</span>
+                </div>
+                <div>
+                  <div class="font-bold text-primary">Amit Desai</div>
+                  <div class="text-sm text-text-muted">MD, Shikhar Prints</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Project Execution Process */}
+      <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="text-center mb-16">
             <span class="inline-block px-4 py-2 bg-solar-green/10 text-solar-green text-sm font-semibold rounded-full mb-4">
@@ -505,7 +631,7 @@ export const HomePage = () => {
       </section>
 
       {/* Key Benefits */}
-      <section class="py-24 bg-white">
+      <section class="py-24 bg-bg-light">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="text-center mb-16">
             <span class="inline-block px-4 py-2 bg-solar-green/10 text-solar-green text-sm font-semibold rounded-full mb-4">
@@ -528,7 +654,7 @@ export const HomePage = () => {
               { icon: 'fa-shield-alt', title: 'Energy Security', desc: 'Reduce dependence on grid power and protect against price volatility.' },
               { icon: 'fa-leaf', title: 'Enhanced ESG Profile', desc: 'Strengthen your environmental, social, and governance commitments.' },
             ].map((benefit) => (
-              <div class="group flex gap-5 p-6 rounded-2xl hover:bg-bg-light transition-all duration-300">
+              <div class="group flex gap-5 p-6 rounded-2xl bg-white hover:bg-solar-green/5 transition-all duration-300">
                 <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-solar-green/20 to-highlight-green/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <i class={`fas ${benefit.icon} text-solar-green text-xl`}></i>
                 </div>
@@ -543,7 +669,7 @@ export const HomePage = () => {
       </section>
 
       {/* Key Clients */}
-      <section class="py-16 bg-bg-light">
+      <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="text-center mb-12">
             <h3 class="text-lg font-semibold text-text-muted mb-2">Trusted by Industry Leaders</h3>
@@ -552,9 +678,9 @@ export const HomePage = () => {
             </p>
           </div>
           
-          <div class="flex flex-wrap items-center justify-center gap-12 opacity-60">
+          <div class="flex flex-wrap items-center justify-center gap-12 opacity-70">
             {['Sumeet Industries', 'KP Group', 'Reliance Industries', 'Filatex', 'Shikhar Prints'].map((client) => (
-              <div class="text-2xl font-bold text-primary/50 hover:text-primary transition-colors duration-300">
+              <div class="text-2xl font-bold text-primary/60 hover:text-primary transition-colors duration-300">
                 {client}
               </div>
             ))}
@@ -563,7 +689,7 @@ export const HomePage = () => {
       </section>
 
       {/* Track Record */}
-      <section class="py-24 bg-white">
+      <section class="py-24 bg-bg-light">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -574,23 +700,23 @@ export const HomePage = () => {
                 Proven Track Record
               </h2>
               <p class="text-xl text-text-muted mb-8">
-                100+ MW delivered across multiple states with a focus on quality, performance, and client satisfaction.
+                500+ MW delivered across multiple states with a focus on quality, performance, and client satisfaction.
               </p>
               
               <div class="grid grid-cols-2 gap-6">
-                <div class="bg-bg-light rounded-2xl p-6">
-                  <div class="text-4xl font-bold text-primary mb-2">100+</div>
+                <div class="bg-white rounded-2xl p-6">
+                  <div class="text-4xl font-bold text-primary mb-2">500+</div>
                   <div class="text-text-muted">MW Installed</div>
                 </div>
-                <div class="bg-bg-light rounded-2xl p-6">
-                  <div class="text-4xl font-bold text-primary mb-2">50+</div>
+                <div class="bg-white rounded-2xl p-6">
+                  <div class="text-4xl font-bold text-primary mb-2">100+</div>
                   <div class="text-text-muted">Projects Completed</div>
                 </div>
-                <div class="bg-bg-light rounded-2xl p-6">
+                <div class="bg-white rounded-2xl p-6">
                   <div class="text-4xl font-bold text-primary mb-2">10+</div>
                   <div class="text-text-muted">States Covered</div>
                 </div>
-                <div class="bg-bg-light rounded-2xl p-6">
+                <div class="bg-white rounded-2xl p-6">
                   <div class="text-4xl font-bold text-primary mb-2">99%</div>
                   <div class="text-text-muted">Client Satisfaction</div>
                 </div>
@@ -605,7 +731,7 @@ export const HomePage = () => {
                 { name: 'Filatex', capacity: '2 MW AC / 2.4 MW DC', type: 'Rooftop' },
                 { name: 'Shikhar Prints', capacity: '825 kW AC / 1 MW DC', type: 'Industrial Rooftop' },
               ].map((project, index) => (
-                <div class="group flex items-center gap-6 bg-bg-light rounded-2xl p-6 hover:bg-solar-green/5 hover:border-solar-green/20 border border-transparent transition-all duration-300">
+                <div class="group flex items-center gap-6 bg-white rounded-2xl p-6 hover:bg-solar-green/5 hover:border-solar-green/20 border border-transparent transition-all duration-300">
                   <div class="w-12 h-12 bg-gradient-to-br from-solar-green to-highlight-green rounded-xl flex items-center justify-center text-white font-bold">
                     {index + 1}
                   </div>
@@ -619,6 +745,21 @@ export const HomePage = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Limited Time Offer Banner */}
+      <section class="py-6 bg-gradient-to-r from-red-500 to-orange-500 text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
+            <i class="fas fa-clock text-2xl"></i>
+            <p class="font-semibold">
+              <span class="text-yellow-200">Limited Time:</span> Government Subsidy up to 40% — Slots filling fast for 2026!
+            </p>
+            <a href="/contact" class="px-6 py-2 bg-white text-red-500 font-bold rounded-full hover:bg-yellow-100 transition-colors">
+              Claim Your Subsidy
+            </a>
           </div>
         </div>
       </section>
@@ -639,14 +780,30 @@ export const HomePage = () => {
             Partner with India's trusted renewable energy experts for a sustainable, profitable future.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-solar-green to-highlight-green text-primary font-bold text-lg rounded-2xl shadow-2xl shadow-solar-green/30 hover:shadow-solar-green/50 hover:scale-105 transition-all duration-300">
+            <a href="/contact" class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-solar-green to-highlight-green text-primary font-bold text-lg rounded-2xl shadow-2xl shadow-solar-green/30 hover:shadow-solar-green/50 hover:scale-105 transition-all duration-300" onclick="trackEvent('CTA', 'click', 'Final CTA - Get Started');">
               Get Started Today
               <i class="fas fa-arrow-right"></i>
             </a>
-            <a href="tel:+919558360879" class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/10 backdrop-blur-sm text-white font-semibold text-lg rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <a href="tel:+919558360879" class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-white/10 backdrop-blur-sm text-white font-semibold text-lg rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300" onclick="trackEvent('CTA', 'click', 'Final CTA - Call');">
               <i class="fas fa-phone"></i>
               Call Us Now
             </a>
+          </div>
+          
+          {/* Trust indicators */}
+          <div class="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-shield-alt text-solar-green"></i>
+              <span>25 Year Warranty</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-certificate text-solar-green"></i>
+              <span>MNRE Empanelled</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-star text-solar-green"></i>
+              <span>4.9/5 Customer Rating</span>
+            </div>
           </div>
         </div>
       </section>

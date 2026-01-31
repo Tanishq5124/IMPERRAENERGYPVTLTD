@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Imperra Energy Favicon - Three diagonal parallelograms -->
+  <rect width="32" height="32" rx="4" fill="#0B2A45"/>
+  <!-- Left bar -->
+  <polygon points="6,26 9,26 13,6 10,6" fill="#A4CE39"/>
+  <!-- Middle bar -->
+  <polygon points="12,26 15,26 19,6 16,6" fill="#A4CE39"/>
+  <!-- Right bar -->
+  <polygon points="18,26 21,26 25,6 22,6" fill="#A4CE39"/>
+</svg>

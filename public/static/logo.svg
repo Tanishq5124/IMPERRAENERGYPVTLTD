@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+  <!-- Imperra Energy Logo - Three diagonal parallelograms -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A4CE39;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9CD44D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Left bar -->
+  <polygon points="8,52 16,52 24,8 16,8" fill="url(#logoGradient)"/>
+  <!-- Middle bar -->
+  <polygon points="20,52 28,52 36,8 28,8" fill="url(#logoGradient)"/>
+  <!-- Right bar -->
+  <polygon points="32,52 40,52 48,8 40,8" fill="url(#logoGradient)"/>
+</svg>

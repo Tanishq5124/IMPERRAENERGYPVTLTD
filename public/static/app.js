@@ -1,5 +1,6 @@
 // Imperra Energy - Main JavaScript
 // Contact: +91 9558360879 | imperraenergypvtltd@gmail.com
+// Version: 2.0 - Updated January 2026
 
 document.addEventListener('DOMContentLoaded', function() {
   initHeader();
@@ -11,6 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
   initSmoothScroll();
   initClickablePhones();
   initLazyLoading();
+  initCookieConsent();
+  initCallbackModal();
+  initExitIntent();
+  initRequestCallback();
+  initTrackingEvents();
 });
 
 // Header Scroll Effect
@@ -28,8 +34,10 @@ function initHeader() {
         
         if (currentScroll > 50) {
           header.classList.add('header-scrolled');
+          header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
         } else {
           header.classList.remove('header-scrolled');
+          header.style.boxShadow = 'none';
         }
         
         lastScroll = currentScroll;
@@ -57,6 +65,7 @@ function initMobileMenu() {
       menu.style.maxHeight = menu.scrollHeight + 'px';
       menuBtn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
       menuBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
     } else {
       menu.style.maxHeight = '0';
       setTimeout(() => {
@@ -64,6 +73,7 @@ function initMobileMenu() {
       }, 300);
       menuBtn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
       menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     }
   }
 
@@ -131,6 +141,11 @@ function initSolarCalculator() {
     submitBtn.innerHTML = '<div class="spinner mx-auto"></div>';
     submitBtn.disabled = true;
 
+    // Track calculator usage
+    if (typeof trackEvent === 'function') {
+      trackEvent('Calculator', 'submit', data.city, billAmount);
+    }
+
     try {
       const response = await fetch('/api/calculate-savings', {
         method: 'POST',
@@ -149,6 +164,11 @@ function initSolarCalculator() {
       if (result.success) {
         displayResults(result.data);
         showToast('Calculation complete! See your estimated savings below.', 'success');
+        
+        // Track successful calculation
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', { content_name: 'Solar Calculator', value: result.data.annualSavings });
+        }
       } else {
         throw new Error(result.message || 'Calculation failed');
       }
@@ -169,10 +189,10 @@ function initSolarCalculator() {
 // Fallback calculation if API fails
 function calculateFallback(data) {
   const billAmount = parseFloat(data.monthlyBill) || 50000;
-  const savingsPercent = data.propertyType === 'industrial' ? 0.60 : 0.55;
+  const savingsPercent = data.propertyType === 'industrial' ? 0.62 : 0.58;
   const monthlySavings = Math.round(billAmount * savingsPercent);
-  const estimatedUnits = billAmount / 7;
-  const systemSizeKW = Math.max(Math.round(estimatedUnits / 120), 5);
+  const estimatedUnits = billAmount / 8;
+  const systemSizeKW = Math.max(Math.round(estimatedUnits / 125), 5);
   
   return {
     monthlySavings,
@@ -180,8 +200,8 @@ function calculateFallback(data) {
     fiveYearSavings: monthlySavings * 60,
     savingsPercent: Math.round(savingsPercent * 100),
     systemSizeKW,
-    annualCO2Offset: Math.max(Math.round(systemSizeKW * 1.2), 1),
-    paybackYears: 4.5,
+    annualCO2Offset: Math.max(Math.round(systemSizeKW * 1.27), 1),
+    paybackYears: 4.2,
     isEstimate: true
   };
 }
@@ -316,6 +336,11 @@ function initContactForm() {
     submitBtn.innerHTML = '<div class="spinner mx-auto"></div>';
     submitBtn.disabled = true;
 
+    // Track form submission attempt
+    if (typeof trackEvent === 'function') {
+      trackEvent('Contact', 'form_submit_attempt', data.service || 'general');
+    }
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -335,6 +360,14 @@ function initContactForm() {
           successDiv.classList.remove('hidden');
         }
         showToast('Thank you! We will contact you within 24 hours.', 'success');
+        
+        // Track successful submission
+        if (typeof trackEvent === 'function') {
+          trackEvent('Contact', 'form_submit_success', data.service || 'general');
+        }
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', { content_name: 'Contact Form' });
+        }
       } else {
         throw new Error(result.message || 'Submission failed');
       }
@@ -374,6 +407,306 @@ function showFieldError(element, message) {
 function hideFieldError(element) {
   const errorEl = element.parentElement.querySelector('.field-error');
   if (errorEl) errorEl.remove();
+}
+
+// Cookie Consent
+function initCookieConsent() {
+  const banner = document.getElementById('cookie-consent');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const declineBtn = document.getElementById('decline-cookies');
+  
+  if (!banner) return;
+  
+  // Check if already consented
+  const consent = localStorage.getItem('cookie-consent');
+  if (consent) return;
+  
+  // Show banner after 2 seconds
+  setTimeout(() => {
+    banner.classList.remove('hidden');
+    banner.style.transform = 'translateY(0)';
+  }, 2000);
+  
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'accepted');
+      banner.style.transform = 'translateY(100%)';
+      setTimeout(() => banner.classList.add('hidden'), 300);
+      
+      // Enable tracking
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+    });
+  }
+  
+  if (declineBtn) {
+    declineBtn.addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'declined');
+      banner.style.transform = 'translateY(100%)';
+      setTimeout(() => banner.classList.add('hidden'), 300);
+    });
+  }
+}
+
+// Callback Modal
+function initCallbackModal() {
+  const modal = document.getElementById('callback-modal');
+  const closeBtn = document.getElementById('close-callback-modal');
+  const form = document.getElementById('callback-form');
+  
+  if (!modal) return;
+  
+  // Open modal via any element with data-open-callback
+  document.querySelectorAll('[data-open-callback]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    });
+  });
+  
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+  }
+  
+  // Close on backdrop click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  });
+  
+  // Handle form submission
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const data = {
+        callback_name: formData.get('callback_name'),
+        callback_phone: formData.get('callback_phone')
+      };
+      
+      if (!data.callback_name || !data.callback_phone) {
+        showToast('Please fill in all fields', 'error');
+        return;
+      }
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<div class="spinner mx-auto"></div>';
+      submitBtn.disabled = true;
+      
+      try {
+        const response = await fetch('/api/callback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          showToast('Thank you! We will call you within 30 minutes.', 'success');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          form.reset();
+          
+          // Track conversion
+          if (typeof trackEvent === 'function') {
+            trackEvent('Callback', 'request_success', 'modal');
+          }
+        } else {
+          throw new Error(result.message);
+        }
+      } catch (error) {
+        showToast('Unable to submit. Please call us at +91 9558360879', 'error');
+      } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  }
+}
+
+// Exit Intent Popup
+function initExitIntent() {
+  const popup = document.getElementById('exit-intent-popup');
+  const closeBtn = document.getElementById('close-exit-popup');
+  const form = document.getElementById('exit-intent-form');
+  
+  if (!popup) return;
+  
+  let hasShown = sessionStorage.getItem('exit-intent-shown');
+  
+  // Show on mouse leave (desktop)
+  document.addEventListener('mouseout', (e) => {
+    if (hasShown) return;
+    if (e.clientY <= 0 && e.relatedTarget === null) {
+      showExitPopup();
+    }
+  });
+  
+  // Show after 45 seconds on mobile (if no interaction)
+  if (window.innerWidth < 1024) {
+    let hasScrolled = false;
+    window.addEventListener('scroll', () => { hasScrolled = true; }, { once: true });
+    
+    setTimeout(() => {
+      if (!hasShown && hasScrolled) {
+        showExitPopup();
+      }
+    }, 45000);
+  }
+  
+  function showExitPopup() {
+    if (hasShown) return;
+    popup.classList.remove('hidden');
+    popup.classList.add('flex');
+    sessionStorage.setItem('exit-intent-shown', 'true');
+    hasShown = true;
+    
+    // Track popup shown
+    if (typeof trackEvent === 'function') {
+      trackEvent('ExitIntent', 'popup_shown', window.location.pathname);
+    }
+  }
+  
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      popup.classList.add('hidden');
+      popup.classList.remove('flex');
+    });
+  }
+  
+  // Close on backdrop click
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+      popup.classList.add('hidden');
+      popup.classList.remove('flex');
+    }
+  });
+  
+  // Handle form submission
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const data = {
+        callback_name: formData.get('exit_name'),
+        callback_phone: formData.get('exit_phone')
+      };
+      
+      if (!data.callback_name || !data.callback_phone) {
+        showToast('Please fill in all fields', 'error');
+        return;
+      }
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<div class="spinner mx-auto"></div>';
+      submitBtn.disabled = true;
+      
+      try {
+        const response = await fetch('/api/callback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          showToast('Thank you! You will receive a call within 30 minutes.', 'success');
+          popup.classList.add('hidden');
+          popup.classList.remove('flex');
+          form.reset();
+          
+          // Track conversion
+          if (typeof trackEvent === 'function') {
+            trackEvent('ExitIntent', 'form_submit_success', 'popup');
+          }
+          if (typeof fbq === 'function') {
+            fbq('track', 'Lead', { content_name: 'Exit Intent Popup' });
+          }
+        } else {
+          throw new Error(result.message);
+        }
+      } catch (error) {
+        showToast('Unable to submit. Please call us at +91 9558360879', 'error');
+      } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  }
+}
+
+// Request Callback button handler
+function initRequestCallback() {
+  // Add click handlers to any "Request Callback" buttons
+  document.querySelectorAll('[data-callback]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modal = document.getElementById('callback-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    });
+  });
+}
+
+// Tracking Events for CTAs
+function initTrackingEvents() {
+  // Track phone clicks
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof trackEvent === 'function') {
+        trackEvent('Contact', 'phone_click', link.href);
+      }
+      if (typeof fbq === 'function') {
+        fbq('track', 'Contact', { content_name: 'Phone Click' });
+      }
+    });
+  });
+  
+  // Track WhatsApp clicks
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof trackEvent === 'function') {
+        trackEvent('Contact', 'whatsapp_click', link.href);
+      }
+      if (typeof fbq === 'function') {
+        fbq('track', 'Contact', { content_name: 'WhatsApp Click' });
+      }
+    });
+  });
+  
+  // Track email clicks
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof trackEvent === 'function') {
+        trackEvent('Contact', 'email_click', link.href);
+      }
+    });
+  });
+  
+  // Track CTA button clicks
+  document.querySelectorAll('[data-track]').forEach(el => {
+    el.addEventListener('click', () => {
+      const trackData = el.dataset.track;
+      if (typeof trackEvent === 'function' && trackData) {
+        trackEvent('CTA', 'click', trackData);
+      }
+    });
+  });
 }
 
 // FAQ Accordion

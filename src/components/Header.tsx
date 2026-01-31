@@ -16,13 +16,17 @@ export const Header = ({ currentPath = '/' }: { currentPath?: string }) => {
       <nav class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" class="flex items-center gap-3 group">
-            <div class="w-12 h-12 bg-gradient-to-br from-solar-green to-highlight-green rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-              <i class="fas fa-solar-panel text-white text-xl"></i>
+          <a href="/" class="flex items-center gap-3 group" aria-label="Imperra Energy - Home">
+            <div class="w-12 h-12 flex items-center justify-center group-hover:scale-105 transition-all duration-300">
+              <svg viewBox="0 0 48 48" class="w-full h-full" aria-hidden="true">
+                <polygon points="6,42 12,42 18,6 12,6" fill="#A4CE39"/>
+                <polygon points="16,42 22,42 28,6 22,6" fill="#A4CE39"/>
+                <polygon points="26,42 32,42 38,6 32,6" fill="#A4CE39"/>
+              </svg>
             </div>
             <div class="flex flex-col">
-              <span class="text-2xl font-bold text-primary tracking-tight">IMPERRA</span>
-              <span class="text-xs font-medium text-solar-green tracking-widest uppercase -mt-1">ENERGY</span>
+              <span class="text-xl font-bold text-primary tracking-tight">IMPERRA ENERGY</span>
+              <span class="text-[10px] font-medium text-text-muted tracking-wider uppercase -mt-0.5">PVT LTD</span>
             </div>
           </a>
 
