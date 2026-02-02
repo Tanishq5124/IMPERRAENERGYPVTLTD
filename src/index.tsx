@@ -11,6 +11,7 @@ import { BlogPage } from './pages/Blog'
 import { ContactPage } from './pages/Contact'
 import { PrivacyPage } from './pages/Privacy'
 import { TermsPage } from './pages/Terms'
+import { NotFoundPage } from './pages/NotFound'
 
 const app = new Hono()
 
@@ -216,6 +217,23 @@ Disallow: /api/
 Disallow: /_worker.js
 `
   return c.text(robotsTxt, 200, { 'Content-Type': 'text/plain' })
+})
+
+// 404 Not Found Page
+app.notFound((c) => {
+  return c.render(
+    <>
+      <Header currentPath="" />
+      <NotFoundPage />
+      <Footer />
+    </>,
+    { 
+      title: 'Page Not Found - 404',
+      description: 'The page you are looking for does not exist. Return to Imperra Energy homepage for solar energy solutions.',
+      canonicalPath: '/404',
+      ogImage: 'https://imperraenergy.com/static/og-image.jpg'
+    }
+  )
 })
 
 // API endpoint for solar calculator

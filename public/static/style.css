@@ -371,3 +371,157 @@ select {
     display: none;
   }
 }
+
+/* ===== ENHANCED HOVER EFFECTS ===== */
+
+/* Card Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(11, 42, 69, 0.1);
+}
+
+/* Button Hover Pulse */
+.btn-pulse:hover {
+  animation: buttonPulse 0.6s ease;
+}
+
+@keyframes buttonPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Icon Bounce on Card Hover */
+.group:hover .icon-bounce {
+  animation: iconBounce 0.4s ease;
+}
+
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Link Underline Animation */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #9CD44D, #C6E872);
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Image Scale on Hover */
+.img-scale {
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+
+.img-scale img {
+  transition: transform 0.5s ease;
+}
+
+.img-scale:hover img {
+  transform: scale(1.08);
+}
+
+/* Border Glow Effect */
+.border-glow {
+  position: relative;
+}
+
+.border-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, #9CD44D, #C6E872, #9CD44D);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.border-glow:hover::before {
+  opacity: 1;
+}
+
+/* Loading States */
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* Form Loading Overlay */
+.form-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.form-loading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 10;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb-item::after {
+  content: '/';
+  margin: 0 0.5rem;
+  color: #9CD44D;
+}
+
+.breadcrumb-item:last-child::after {
+  content: '';
+}
+
+/* ===== PERFORMANCE OPTIMIZATIONS ===== */
+
+/* Hardware Acceleration for Animations */
+.animate-slide-up,
+.animate-fade-in,
+.animate-float,
+.hover-lift,
+.btn-pulse {
+  will-change: transform, opacity;
+}
+
+/* Reduce motion for performance */
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up,
+  .animate-fade-in,
+  .animate-float,
+  .hover-lift {
+    will-change: auto;
+  }
+}

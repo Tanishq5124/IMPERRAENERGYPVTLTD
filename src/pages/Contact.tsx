@@ -138,9 +138,36 @@ export const ContactPage = () => {
                 </button>
 
                 <p class="text-xs text-center text-text-muted">
-                  By submitting this form, you agree to our <a href="#" class="text-solar-green hover:underline">Privacy Policy</a>.
+                  By submitting this form, you agree to our <a href="/privacy" class="text-solar-green hover:underline">Privacy Policy</a>.
                 </p>
               </form>
+
+              {/* Trust Bullets */}
+              <div class="mt-8 p-6 bg-bg-light rounded-xl">
+                <h4 class="font-semibold text-primary mb-4">When you contact us, you get:</h4>
+                <ul class="space-y-3">
+                  <li class="flex items-center gap-3 text-text-muted text-sm">
+                    <i class="fas fa-check-circle text-solar-green"></i>
+                    <span>Response within 24 hours (usually much faster)</span>
+                  </li>
+                  <li class="flex items-center gap-3 text-text-muted text-sm">
+                    <i class="fas fa-check-circle text-solar-green"></i>
+                    <span>Free site assessment worth ₹10,000</span>
+                  </li>
+                  <li class="flex items-center gap-3 text-text-muted text-sm">
+                    <i class="fas fa-check-circle text-solar-green"></i>
+                    <span>Custom ROI analysis for your business</span>
+                  </li>
+                  <li class="flex items-center gap-3 text-text-muted text-sm">
+                    <i class="fas fa-check-circle text-solar-green"></i>
+                    <span>No-obligation consultation with solar experts</span>
+                  </li>
+                  <li class="flex items-center gap-3 text-text-muted text-sm">
+                    <i class="fas fa-lock text-solar-green"></i>
+                    <span>Your information is 100% secure & never shared</span>
+                  </li>
+                </ul>
+              </div>
 
               {/* Success Message (hidden by default) */}
               <div id="form-success" class="hidden mt-8 p-6 bg-solar-green/10 rounded-xl text-center">

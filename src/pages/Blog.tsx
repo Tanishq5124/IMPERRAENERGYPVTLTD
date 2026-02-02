@@ -1,51 +1,69 @@
 export const BlogPage = () => {
   const articles = [
     {
-      title: 'Understanding Solar ROI: A Complete Guide for Indian Businesses',
-      excerpt: 'Learn how to calculate the return on investment for solar installations and maximize your energy savings.',
+      id: 'solar-roi-guide-2026',
+      title: 'Understanding Solar ROI in 2026: A Complete Guide for Indian Businesses',
+      excerpt: 'Learn how to calculate the return on investment for solar installations and maximize your energy savings with the latest 2026 subsidy schemes and electricity rates.',
       category: 'Solar ROI',
       readTime: '8 min read',
-      date: 'January 15, 2024',
-      featured: true
+      date: 'January 28, 2026',
+      featured: true,
+      content: `
+        <p>Calculating solar ROI is critical for any business considering a solar investment. With electricity rates increasing by 5-8% annually and government subsidies available until 2026, now is the optimal time to go solar.</p>
+        <h3>Key ROI Factors in 2026</h3>
+        <ul>
+          <li><strong>Current electricity rates:</strong> ₹8-12 per unit for commercial/industrial</li>
+          <li><strong>System cost:</strong> ₹45,000-55,000 per kW (including installation)</li>
+          <li><strong>Government subsidy:</strong> Up to 40% for systems under 500 kW</li>
+          <li><strong>Depreciation benefits:</strong> 40% accelerated depreciation</li>
+        </ul>
+        <h3>Typical ROI Timeline</h3>
+        <p>Most businesses achieve complete ROI within 3-4.5 years, with 25+ years of subsequent free electricity generation.</p>
+      `
     },
     {
-      title: 'Industrial Energy Savings: Strategies for Manufacturing Units',
-      excerpt: 'Discover proven strategies to reduce energy costs in manufacturing facilities through solar adoption.',
+      id: 'industrial-energy-savings',
+      title: 'Industrial Energy Savings: Proven Strategies for Manufacturing Units',
+      excerpt: 'Discover battle-tested strategies to reduce energy costs by 40-70% in manufacturing facilities through solar adoption and energy efficiency measures.',
       category: 'Industrial',
       readTime: '6 min read',
-      date: 'January 10, 2024',
+      date: 'January 22, 2026',
       featured: false
     },
     {
-      title: 'CAPEX vs PPA: Which Solar Model is Right for Your Business?',
-      excerpt: 'A detailed comparison of capital expenditure and power purchase agreement models for solar investments.',
+      id: 'capex-vs-ppa-comparison',
+      title: 'CAPEX vs PPA vs Solar Investor: Which Solar Model is Right for Your Business?',
+      excerpt: 'A comprehensive comparison of capital expenditure, power purchase agreement, and third-party investor models to help you make an informed solar investment decision.',
       category: 'Financial Models',
       readTime: '10 min read',
-      date: 'January 5, 2024',
+      date: 'January 18, 2026',
       featured: false
     },
     {
-      title: 'Latest Solar Policies in India: What Businesses Need to Know',
-      excerpt: 'Stay updated with the latest government policies, incentives, and regulations affecting solar adoption.',
+      id: 'solar-policies-india-2026',
+      title: 'Latest Solar Policies in India 2026: What Businesses Need to Know',
+      excerpt: 'Complete overview of MNRE guidelines, state-specific subsidies, net metering regulations, and green energy mandates affecting solar adoption in 2026.',
       category: 'Policy Updates',
       readTime: '7 min read',
-      date: 'December 28, 2023',
+      date: 'January 12, 2026',
       featured: false
     },
     {
-      title: 'The Future of Solar Technology: Trends to Watch in 2024',
-      excerpt: 'Explore emerging technologies in solar energy including bifacial panels, energy storage, and smart grids.',
+      id: 'solar-technology-trends-2026',
+      title: 'The Future of Solar Technology: 5 Trends Reshaping the Industry in 2026',
+      excerpt: 'From TOPCon and HJT cells to advanced energy storage and AI-powered optimization - explore the technologies transforming solar energy.',
       category: 'Technology',
       readTime: '9 min read',
-      date: 'December 20, 2023',
+      date: 'January 5, 2026',
       featured: false
     },
     {
-      title: 'Case Study: How Textile Industries Benefit from Solar Power',
-      excerpt: 'Real-world examples of textile manufacturers achieving significant energy savings through solar adoption.',
+      id: 'textile-industry-case-study',
+      title: 'Case Study: How Gujarat Textile Mills Achieved 65% Energy Savings with Solar',
+      excerpt: 'Real-world success story of how leading textile manufacturers in Surat reduced electricity costs and achieved energy independence through rooftop solar.',
       category: 'Case Studies',
       readTime: '5 min read',
-      date: 'December 15, 2023',
+      date: 'December 28, 2025',
       featured: false
     }
   ]

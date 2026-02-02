@@ -5,9 +5,10 @@ interface RendererProps {
   description?: string
   canonicalPath?: string
   ogImage?: string
+  breadcrumbs?: Array<{ name: string; url: string }>
 }
 
-export const renderer = jsxRenderer(({ children, title, description, canonicalPath, ogImage }: { children: any } & RendererProps) => {
+export const renderer = jsxRenderer(({ children, title, description, canonicalPath, ogImage, breadcrumbs }: { children: any } & RendererProps) => {
   const siteName = 'Imperra Energy Pvt. Ltd.'
   const siteUrl = 'https://imperraenergy.com'
   const pageTitle = title ? `${title} | Imperra Energy` : 'Imperra Energy — India\'s Leading Solar EPC Company | 500+ MW Installed'
@@ -154,6 +155,66 @@ export const renderer = jsxRenderer(({ children, title, description, canonicalPa
     }
   }
 
+  // FAQ Schema (for Contact page)
+  const faqSchema = canonicalPath === '/contact' ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does it take to get a solar system installed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Installation time varies based on system size. Rooftop systems typically take 2-4 weeks, while large-scale solar parks can take 6-12 months from approval to commissioning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What financing options are available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer multiple financing models including CAPEX (full ownership), OPEX/PPA (pay for power), and third-party investor models. Our team can help you choose the best option for your business."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the typical ROI for solar installations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most commercial and industrial solar installations see ROI within 3-5 years, with total savings of 40-70% on electricity bills over the system lifetime of 25+ years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide maintenance services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer comprehensive O&M (Operations & Maintenance) services including preventive maintenance, performance monitoring, and 24/7 support to ensure optimal system performance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide services across India, with major operations in Gujarat, Maharashtra, Rajasthan, Karnataka, and Tamil Nadu. Contact us to discuss your location."
+        }
+      }
+    ]
+  } : null
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbs.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  } : null
+
   return (
     <html lang="en">
       <head>
@@ -214,18 +275,20 @@ export const renderer = jsxRenderer(({ children, title, description, canonicalPa
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+        {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
+        {breadcrumbSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />}
         
         {/* Theme color */}
         <meta name="theme-color" content="#0B2A45" />
         <meta name="msapplication-TileColor" content="#0B2A45" />
         
-        {/* Google Analytics 4 - Replace G-XXXXXXXXXX with your actual GA4 ID */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+        {/* Google Analytics 4 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1EFZLH62K"></script>
         <script dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX', {
+          gtag('config', 'G-Q1EFZLH62K', {
             page_title: '${pageTitle.replace(/'/g, "\\'")}',
             page_location: window.location.href
           });
@@ -240,16 +303,17 @@ export const renderer = jsxRenderer(({ children, title, description, canonicalPa
           };
         `}} />
         
-        {/* Google Tag Manager - Replace GTM-XXXXXXX with your actual GTM ID */}
+        {/* Google Tag Manager */}
         <script dangerouslySetInnerHTML={{ __html: `
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-XXXXXXX');
+          })(window,document,'script','dataLayer','GTM-T5R8KM7P');
         `}} />
         
-        {/* Facebook Pixel - Replace XXXXXXXXXX with your actual Pixel ID */}
+        {/* Facebook Pixel - Add your Pixel ID when running ads */}
+        {/* Uncomment and add your pixel ID when ready
         <script dangerouslySetInnerHTML={{ __html: `
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -259,14 +323,15 @@ export const renderer = jsxRenderer(({ children, title, description, canonicalPa
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', 'XXXXXXXXXX');
+          fbq('init', 'YOUR_PIXEL_ID');
           fbq('track', 'PageView');
         `}} />
+        */}
       </head>
       <body class="font-sans text-text-main bg-white antialiased">
         {/* Google Tag Manager (noscript) */}
         <noscript>
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5R8KM7P" height="0" width="0" style="display:none;visibility:hidden"></iframe>
         </noscript>
         
         {/* Skip to content for accessibility */}
@@ -419,6 +484,6 @@ export const renderer = jsxRenderer(({ children, title, description, canonicalPa
 
 declare module 'hono' {
   interface ContextRenderer {
-    (content: string | Promise<string>, props?: { title?: string; description?: string; canonicalPath?: string; ogImage?: string }): Response | Promise<Response>
+    (content: string | Promise<string>, props?: { title?: string; description?: string; canonicalPath?: string; ogImage?: string; breadcrumbs?: Array<{ name: string; url: string }> }): Response | Promise<Response>
   }
 }

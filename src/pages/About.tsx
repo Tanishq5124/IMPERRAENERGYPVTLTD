@@ -127,35 +127,53 @@ export const AboutPage = () => {
         </div>
       </section>
 
-      {/* Leadership Team */}
+      {/* Why Choose Imperra Energy - with specific numbers */}
       <section class="py-24 bg-bg-light">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="text-center mb-16">
             <span class="inline-block px-4 py-2 bg-solar-green/10 text-solar-green text-sm font-semibold rounded-full mb-4">
-              Meet Our Team
+              Why Choose Us
             </span>
             <h2 class="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
-              Leadership Team
+              The Imperra Advantage
             </h2>
             <p class="text-xl text-text-muted max-w-3xl mx-auto">
-              Experienced professionals driving innovation in renewable energy
+              Numbers that speak for our commitment and excellence
             </p>
           </div>
 
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
-              { name: 'Rajesh Patel', role: 'Founder & CEO', experience: '25+ years in Energy Sector' },
-              { name: 'Priya Sharma', role: 'Chief Technical Officer', experience: '20+ years in Solar Engineering' },
-              { name: 'Amit Desai', role: 'Head of Operations', experience: '15+ years in Project Management' },
-            ].map((member) => (
-              <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div class="w-24 h-24 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <i class="fas fa-user text-white text-3xl"></i>
+              { number: '500+', label: 'MW Installed', icon: 'fa-bolt', desc: 'Total solar capacity deployed across India' },
+              { number: '100+', label: 'Projects Delivered', icon: 'fa-solar-panel', desc: 'Successfully commissioned projects' },
+              { number: '20+', label: 'Years Experience', icon: 'fa-award', desc: 'Industry expertise since 2004' },
+              { number: '99%', label: 'Client Satisfaction', icon: 'fa-star', desc: 'Based on 127 verified reviews' },
+            ].map((stat) => (
+              <div class="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                <div class="w-16 h-16 bg-gradient-to-br from-solar-green to-highlight-green rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <i class={`fas ${stat.icon} text-white text-2xl`}></i>
                 </div>
-                <div class="text-center">
-                  <h3 class="text-xl font-bold text-primary mb-1">{member.name}</h3>
-                  <div class="text-solar-green font-medium mb-3">{member.role}</div>
-                  <p class="text-sm text-text-muted">{member.experience}</p>
+                <div class="text-4xl font-bold text-primary mb-1">{stat.number}</div>
+                <div class="text-solar-green font-semibold mb-2">{stat.label}</div>
+                <p class="text-sm text-text-muted">{stat.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Additional Highlights */}
+          <div class="grid md:grid-cols-3 gap-8">
+            {[
+              { title: 'MNRE Empanelled', icon: 'fa-certificate', desc: 'Government certified for solar installations' },
+              { title: 'ISO 9001:2015', icon: 'fa-shield-alt', desc: 'Quality management system certified' },
+              { title: '10+ States', icon: 'fa-map-marked-alt', desc: 'Pan-India presence and service network' },
+            ].map((item) => (
+              <div class="flex items-start gap-4 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="w-12 h-12 bg-solar-green/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <i class={`fas ${item.icon} text-solar-green text-xl`}></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-primary mb-1">{item.title}</h4>
+                  <p class="text-sm text-text-muted">{item.desc}</p>
                 </div>
               </div>
             ))}
