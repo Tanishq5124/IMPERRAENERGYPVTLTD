@@ -11,8 +11,8 @@ interface RendererProps {
 export const renderer = jsxRenderer(({ children, title, description, canonicalPath, ogImage, breadcrumbs }: { children: any } & RendererProps) => {
   const siteName = 'Imperra Energy Pvt. Ltd.'
   const siteUrl = 'https://imperraenergy.com'
-  const pageTitle = title ? `${title} | Imperra Energy` : 'Imperra Energy — India\'s Leading Solar EPC Company | 500+ MW Installed'
-  const pageDescription = description || 'Imperra Energy Pvt. Ltd. - Leading solar EPC company in India with 500+ MW installed capacity. Solar park EPC, industrial rooftop solar, captive solar solutions. MNRE empanelled. Get free site assessment.'
+  const pageTitle = title ? `${title} | Imperra Energy` : 'Imperra Energy — Solar EPC Company | 50 MW Installed | 500 MW Target'
+  const pageDescription = description || 'Imperra Energy Pvt. Ltd. - Fast-scaling solar EPC company in India. Ground-mounted solar, industrial & commercial installations. 50 MW achieved, targeting 500 MW. Get free site assessment.'
   const canonical = canonicalPath ? `${siteUrl}${canonicalPath}` : siteUrl
   const ogImageUrl = ogImage || `${siteUrl}/static/og-image.jpg`
 
@@ -30,8 +30,8 @@ export const renderer = jsxRenderer(({ children, title, description, canonicalPa
       "width": 200,
       "height": 60
     },
-    "description": "Leading solar energy company in India providing EPC solutions for solar parks, industrial rooftop installations, and captive power plants with 500+ MW installed capacity.",
-    "foundingDate": "2004",
+    "description": "Fast-scaling solar EPC company in India providing end-to-end solar solutions including ground-mounted projects, industrial & commercial installations. Strategic joint venture with 50 MW achieved, targeting 500 MW.",
+    "foundingDate": "2024",
     "numberOfEmployees": {
       "@type": "QuantitativeValue",
       "minValue": 100,
@@ -418,60 +418,7 @@ export const renderer = jsxRenderer(({ children, title, description, canonicalPa
           </div>
         </div>
         
-        {/* Exit Intent Popup */}
-        <div id="exit-intent-popup" class="fixed inset-0 bg-black/60 z-[70] hidden items-center justify-center p-4" style="backdrop-filter: blur(4px);">
-          <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden relative animate-slide-up shadow-2xl">
-            <button id="close-exit-popup" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 z-10 p-2">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            
-            {/* Urgency Banner */}
-            <div class="bg-gradient-to-r from-red-500 to-orange-500 text-white text-center py-2 px-4">
-              <p class="text-sm font-semibold">
-                <i class="fas fa-clock mr-2"></i>
-                Limited Time: Govt. Subsidy Up to 40% Ending Soon!
-              </p>
-            </div>
-            
-            <div class="p-8">
-              <div class="text-center mb-6">
-                <div class="w-20 h-20 bg-gradient-to-br from-solar-green to-highlight-green rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i class="fas fa-sun text-4xl text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-primary mb-2">Wait! Don't Miss Out</h3>
-                <p class="text-text-muted">Get a FREE solar assessment worth ₹10,000</p>
-              </div>
-              
-              <div class="space-y-3 mb-6">
-                <div class="flex items-center gap-3 text-sm text-text-main">
-                  <i class="fas fa-check-circle text-solar-green"></i>
-                  <span>Free site inspection & feasibility study</span>
-                </div>
-                <div class="flex items-center gap-3 text-sm text-text-main">
-                  <i class="fas fa-check-circle text-solar-green"></i>
-                  <span>Custom ROI & savings projection</span>
-                </div>
-                <div class="flex items-center gap-3 text-sm text-text-main">
-                  <i class="fas fa-check-circle text-solar-green"></i>
-                  <span>No obligation, 100% free consultation</span>
-                </div>
-              </div>
-              
-              <form id="exit-intent-form" class="space-y-4">
-                <input type="text" name="exit_name" placeholder="Your Name" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-solar-green focus:border-solar-green" />
-                <input type="tel" name="exit_phone" placeholder="Phone Number" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-solar-green focus:border-solar-green" />
-                <button type="submit" class="w-full py-4 bg-gradient-to-r from-solar-green to-highlight-green text-primary font-bold text-lg rounded-xl hover:shadow-lg transition-all">
-                  <i class="fas fa-gift mr-2"></i>
-                  Claim Free Assessment
-                </button>
-              </form>
-              
-              <p class="text-xs text-center text-text-muted mt-4">
-                <i class="fas fa-shield-alt mr-1"></i> We respect your privacy. No spam ever.
-              </p>
-            </div>
-          </div>
-        </div>
+
         
         {/* Add padding at bottom for mobile CTA bar */}
         <div class="h-16 lg:hidden"></div>

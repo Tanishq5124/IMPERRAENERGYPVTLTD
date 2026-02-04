@@ -26,8 +26,8 @@ app.get('/', (c) => {
       <Footer />
     </>,
     { 
-      title: 'India\'s Leading Solar EPC Company | 500+ MW Installed',
-      description: 'Imperra Energy - India\'s trusted solar EPC company with 500+ MW installed capacity. Solar park EPC, industrial rooftop solar, captive power solutions. MNRE empanelled. Get free site assessment & proposal.',
+      title: 'Fast-Scaling Solar EPC Company | 50 MW Milestone | 500+ MW Target',
+      description: 'Imperra Energy Pvt. Ltd. - A strategic JV delivering high-performance solar energy. Ground-mounted, industrial, commercial solar installations. 50 MW achieved, targeting 500+ MW. Strong engineering & execution.',
       canonicalPath: '/',
       ogImage: 'https://imperraenergy.com/static/og-home.jpg'
     }
@@ -43,8 +43,8 @@ app.get('/about', (c) => {
       <Footer />
     </>,
     { 
-      title: 'About Us - 20+ Years of Solar Energy Excellence',
-      description: 'Learn about Imperra Energy - 20+ years driving India\'s renewable energy transition. Our vision, mission, leadership team & core values. 500+ MW delivered across 10+ states.',
+      title: 'About Us - Strategic JV for Solar Energy Excellence',
+      description: 'Imperra Energy - Strategic joint venture between established industry groups. Vision to deliver high-performance, scalable, sustainable solar solutions. Innovation, Sustainability, Efficiency.',
       canonicalPath: '/about',
       ogImage: 'https://imperraenergy.com/static/og-about.jpg'
     }
@@ -60,8 +60,8 @@ app.get('/services', (c) => {
       <Footer />
     </>,
     { 
-      title: 'Solar Energy Services - EPC, Rooftop, Captive & O&M',
-      description: 'Comprehensive solar services: Solar Park EPC (300+ MW), Industrial & Rooftop Solar, Captive Power Solutions, CAPEX/PPA/Solar Investor models, and 24/7 O&M support. Get your free proposal today.',
+      title: 'Solar Services - Ground-Mount, Industrial & Large-Scale',
+      description: 'End-to-end lifecycle services: Engineering & design, Procurement, Project management, Installation & commissioning, Performance optimization. CAPEX/PPA/Solar Investor models available.',
       canonicalPath: '/services',
       ogImage: 'https://imperraenergy.com/static/og-services.jpg'
     }
@@ -77,8 +77,8 @@ app.get('/projects', (c) => {
       <Footer />
     </>,
     { 
-      title: 'Solar Project Portfolio - 100+ MW Installed Across India',
-      description: 'Explore Imperra Energy\'s solar project portfolio: 100+ MW installed, 50+ projects completed across Gujarat, Maharashtra, Rajasthan & more. View our Sumeet Industries 30MW, KP Group 15MW installations.',
+      title: 'Solar Project Portfolio - 50 MW Milestone Achieved',
+      description: 'Explore Imperra Energy\'s execution track record: 50 MW milestone demonstrating on-time, on-budget delivery capability. Ground-mounted, industrial, commercial solar projects across India.',
       canonicalPath: '/projects',
       ogImage: 'https://imperraenergy.com/static/og-projects.jpg'
     }
@@ -94,8 +94,8 @@ app.get('/sustainability', (c) => {
       <Footer />
     </>,
     { 
-      title: 'Sustainability & ESG Commitment - 150K+ Tonnes CO2 Offset',
-      description: 'Imperra Energy\'s sustainability commitment: 150K+ tonnes CO2 offset, UN SDG alignment, comprehensive ESG framework. Join us in building a cleaner, greener India by 2030.',
+      title: 'Sustainability & Innovation - Reducing Carbon Emissions',
+      description: 'Imperra Energy commitment to innovation & sustainability: Reduce carbon emissions, improve energy security, deliver long-term performance across asset lifecycles.',
       canonicalPath: '/sustainability',
       ogImage: 'https://imperraenergy.com/static/og-sustainability.jpg'
     }
@@ -111,8 +111,8 @@ app.get('/blog', (c) => {
       <Footer />
     </>,
     { 
-      title: 'Solar Energy Blog - ROI Guides, Policy Updates & Industry Insights',
-      description: 'Expert solar energy insights: Solar ROI calculators, CAPEX vs PPA comparison, 2026 subsidy updates, industrial energy saving strategies. Stay informed with Imperra Energy blog.',
+      title: 'Solar Energy Blog - Industry Insights & Market Outlook',
+      description: 'Expert solar energy insights: Global solar growth trends, climate commitments, energy transition updates, ROI guides, CAPEX vs PPA analysis. Stay informed with Imperra Energy blog.',
       canonicalPath: '/blog',
       ogImage: 'https://imperraenergy.com/static/og-blog.jpg'
     }

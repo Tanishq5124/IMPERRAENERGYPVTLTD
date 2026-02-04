@@ -1,58 +1,58 @@
 export const ProjectsPage = () => {
   const projects = [
     {
-      name: 'Sumeet Industries',
-      capacity: '30 MW',
-      type: 'Ground Mount Solar Park',
+      name: 'Ground Mount Project - Utility Scale',
+      capacity: '25 MW',
+      type: 'Ground Mount Solar',
       location: 'Gujarat',
-      description: 'Large-scale ground mount solar installation with advanced tracking systems for optimal energy generation.',
-      features: ['Single-axis tracking', 'Grid-tied system', 'Remote monitoring'],
-      year: '2023'
+      description: 'Large-scale ground mount solar installation demonstrating execution capability with on-time, on-budget delivery.',
+      features: ['Engineering & design', 'Procurement', 'Performance optimization'],
+      year: '2025'
     },
     {
-      name: 'KP Group',
+      name: 'Industrial Installation - Manufacturing',
       capacity: '15 MW',
-      type: 'Solar Park',
+      type: 'Industrial Solar',
       location: 'Rajasthan',
-      description: 'Utility-scale solar park designed for maximum efficiency in high-irradiance regions.',
-      features: ['Bi-facial panels', 'String inverters', 'SCADA integration'],
-      year: '2022'
+      description: 'Industrial/commercial solar installation reducing carbon emissions and improving energy security.',
+      features: ['Project management', 'Installation & commissioning', 'O&M support'],
+      year: '2025'
     },
     {
-      name: 'Reliance Industries',
-      capacity: '10 MW',
-      type: 'Industrial Solar',
-      location: 'Maharashtra',
-      description: 'Industrial solar installation powering manufacturing operations with clean energy.',
-      features: ['Rooftop & ground', 'Battery storage', 'Load management'],
-      year: '2022'
-    },
-    {
-      name: 'Filatex',
-      capacity: '2 MW AC / 2.4 MW DC',
-      type: 'Industrial Rooftop',
-      location: 'Gujarat',
-      description: 'High-density rooftop installation maximizing available space for energy generation.',
-      features: ['High-efficiency panels', 'Central inverter', 'Net metering'],
-      year: '2021'
-    },
-    {
-      name: 'Shikhar Prints',
-      capacity: '825 kW AC / 1 MW DC',
-      type: 'Commercial Rooftop',
-      location: 'Gujarat',
-      description: 'Commercial rooftop system designed for textile manufacturing facility.',
-      features: ['Mono PERC panels', 'Weather monitoring', 'Mobile app'],
-      year: '2021'
-    },
-    {
-      name: 'Gujarat Textile Park',
+      name: 'Commercial Rooftop - C&I',
       capacity: '5 MW',
-      type: 'Industrial Solar',
+      type: 'Commercial Rooftop',
+      location: 'Maharashtra',
+      description: 'Commercial solar installation tailored to client energy needs, site conditions, and financial objectives.',
+      features: ['Engineering design', 'Efficient execution', 'Long-term performance'],
+      year: '2024'
+    },
+    {
+      name: 'Solar Park Project - Grid Connected',
+      capacity: '3 MW',
+      type: 'Solar Park',
       location: 'Gujarat',
-      description: 'Multi-facility solar installation serving an industrial textile complex.',
-      features: ['Shared infrastructure', 'Captive consumption', 'ESG compliance'],
-      year: '2020'
+      description: 'Large-scale solar infrastructure development with comprehensive lifecycle services.',
+      features: ['Strong planning', 'Risk management', 'Quality adherence'],
+      year: '2024'
+    },
+    {
+      name: 'Captive Power - Industrial',
+      capacity: '2 MW',
+      type: 'Captive Solar',
+      location: 'Gujarat',
+      description: 'Captive power solution providing energy security and long-term cost savings.',
+      features: ['Customized solution', 'Financial modeling', 'Asset management'],
+      year: '2024'
+    },
+    {
+      name: 'Large-Scale Infrastructure',
+      capacity: '500+ MW Target',
+      type: 'Growth Strategy',
+      location: 'Pan-India',
+      description: 'Growth strategy targeting 500+ MW solar capacity within the next three years with scalable execution systems.',
+      features: ['Scalable systems', 'Technical leadership', 'Strong financial backing'],
+      year: '2026-28'
     }
   ]
 
@@ -71,11 +71,11 @@ export const ProjectsPage = () => {
               Our Portfolio
             </span>
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-              Powering India with
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-solar-green to-highlight-green"> Clean Energy</span>
+              Execution
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-solar-green to-highlight-green"> Track Record</span>
             </h1>
             <p class="text-xl text-gray-300 leading-relaxed">
-              Explore our portfolio of industrial and utility-scale installations across India, delivering reliable renewable energy solutions.
+              50 MW milestone achieved demonstrating capability for on-time, on-budget delivery. Targeting 500+ MW of solar capacity within the next three years.
             </p>
           </div>
         </div>
@@ -86,20 +86,20 @@ export const ProjectsPage = () => {
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div class="text-4xl font-bold text-primary mb-2">100+</div>
-              <div class="text-text-muted">MW Installed</div>
+              <div class="text-4xl font-bold text-primary mb-2">50</div>
+              <div class="text-text-muted">MW Milestone</div>
             </div>
             <div>
-              <div class="text-4xl font-bold text-primary mb-2">50+</div>
-              <div class="text-text-muted">Projects Completed</div>
+              <div class="text-4xl font-bold text-primary mb-2">500+</div>
+              <div class="text-text-muted">MW Target (3 Yrs)</div>
             </div>
             <div>
-              <div class="text-4xl font-bold text-primary mb-2">10+</div>
-              <div class="text-text-muted">States Covered</div>
+              <div class="text-4xl font-bold text-primary mb-2">100%</div>
+              <div class="text-text-muted">On-Time Delivery</div>
             </div>
             <div>
-              <div class="text-4xl font-bold text-primary mb-2">₹2000Cr+</div>
-              <div class="text-text-muted">Project Value</div>
+              <div class="text-4xl font-bold text-primary mb-2">3</div>
+              <div class="text-text-muted">Core Focus Areas</div>
             </div>
           </div>
         </div>
@@ -184,45 +184,45 @@ export const ProjectsPage = () => {
               Featured Project
             </span>
             <h2 class="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
-              Sumeet Industries - 30 MW
+              Growth Strategy - 500+ MW
             </h2>
           </div>
 
           <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div class="bg-gradient-to-br from-solar-green/20 to-highlight-green/10 rounded-3xl p-12 text-center">
-              <i class="fas fa-sun text-9xl text-solar-green mb-6"></i>
-              <div class="text-5xl font-bold text-primary mb-2">30 MW</div>
-              <div class="text-text-muted">Ground Mount Solar Park</div>
+              <i class="fas fa-rocket text-9xl text-solar-green mb-6"></i>
+              <div class="text-5xl font-bold text-primary mb-2">500+ MW</div>
+              <div class="text-text-muted">Target in 3 Years</div>
             </div>
 
             <div>
-              <h3 class="text-2xl font-bold text-primary mb-6">Project Highlights</h3>
+              <h3 class="text-2xl font-bold text-primary mb-6">Why Choose Imperra Energy</h3>
               <div class="space-y-6">
                 <div class="flex gap-4">
                   <div class="w-12 h-12 bg-solar-green/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-bolt text-solar-green"></i>
+                    <i class="fas fa-cogs text-solar-green"></i>
                   </div>
                   <div>
-                    <h4 class="font-semibold text-primary mb-1">Annual Generation</h4>
-                    <p class="text-text-muted">45,000 MWh clean energy per year</p>
+                    <h4 class="font-semibold text-primary mb-1">Proven Execution Capability</h4>
+                    <p class="text-text-muted">50 MW milestone with on-time, on-budget delivery</p>
                   </div>
                 </div>
                 <div class="flex gap-4">
                   <div class="w-12 h-12 bg-solar-green/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-leaf text-solar-green"></i>
+                    <i class="fas fa-drafting-compass text-solar-green"></i>
                   </div>
                   <div>
-                    <h4 class="font-semibold text-primary mb-1">CO₂ Offset</h4>
-                    <p class="text-text-muted">36,000 tonnes annually</p>
+                    <h4 class="font-semibold text-primary mb-1">Strong Engineering & PM</h4>
+                    <p class="text-text-muted">Expert team of solar engineers and project managers</p>
                   </div>
                 </div>
                 <div class="flex gap-4">
                   <div class="w-12 h-12 bg-solar-green/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i class="fas fa-clock text-solar-green"></i>
+                    <i class="fas fa-hand-holding-usd text-solar-green"></i>
                   </div>
                   <div>
-                    <h4 class="font-semibold text-primary mb-1">Project Duration</h4>
-                    <p class="text-text-muted">Completed in 8 months</p>
+                    <h4 class="font-semibold text-primary mb-1">Financially Backed Growth</h4>
+                    <p class="text-text-muted">Strategic JV with strong financial backing</p>
                   </div>
                 </div>
                 <div class="flex gap-4">
@@ -230,8 +230,8 @@ export const ProjectsPage = () => {
                     <i class="fas fa-chart-line text-solar-green"></i>
                   </div>
                   <div>
-                    <h4 class="font-semibold text-primary mb-1">Performance Ratio</h4>
-                    <p class="text-text-muted">82% average annual PR</p>
+                    <h4 class="font-semibold text-primary mb-1">Long-Term Performance Focus</h4>
+                    <p class="text-text-muted">Performance optimization across asset lifecycles</p>
                   </div>
                 </div>
               </div>
@@ -244,10 +244,10 @@ export const ProjectsPage = () => {
       <section class="py-24 bg-gradient-to-br from-primary via-primary-dark to-primary">
         <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-            Your Project Could Be Next
+            Partner With Us Today
           </h2>
           <p class="text-xl text-gray-300 mb-10">
-            Join the growing list of successful solar installations powered by Imperra Energy.
+            Capitalize on global solar growth driven by climate commitments and energy transition. Customized solutions for your business.
           </p>
           <a href="/contact" class="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-solar-green to-highlight-green text-primary font-bold text-lg rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300">
             Start Your Project

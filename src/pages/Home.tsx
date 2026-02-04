@@ -672,16 +672,16 @@ export const HomePage = () => {
       <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="text-center mb-12">
-            <h3 class="text-lg font-semibold text-text-muted mb-2">Trusted by Industry Leaders</h3>
+            <h3 class="text-lg font-semibold text-text-muted mb-2">Serving Key Industry Sectors</h3>
             <p class="text-sm text-text-muted">
-              Trusted partner to industry giants across manufacturing, infrastructure, and energy sectors.
+              Delivering solar solutions across manufacturing, industrial, and commercial sectors.
             </p>
           </div>
           
           <div class="flex flex-wrap items-center justify-center gap-12 opacity-70">
-            {['Sumeet Industries', 'KP Group', 'Reliance Industries', 'Filatex', 'Shikhar Prints'].map((client) => (
+            {['Manufacturing', 'Industrial', 'Commercial', 'Infrastructure', 'Utilities'].map((sector) => (
               <div class="text-2xl font-bold text-primary/60 hover:text-primary transition-colors duration-300">
-                {client}
+                {sector}
               </div>
             ))}
           </div>
@@ -697,39 +697,39 @@ export const HomePage = () => {
                 Our Portfolio
               </span>
               <h2 class="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
-                Proven Track Record
+                Execution Track Record
               </h2>
               <p class="text-xl text-text-muted mb-8">
-                500+ MW delivered across multiple states with a focus on quality, performance, and client satisfaction.
+                50 MW milestone achieved demonstrating capability for on-time, on-budget delivery with 500+ MW growth target.
               </p>
               
               <div class="grid grid-cols-2 gap-6">
                 <div class="bg-white rounded-2xl p-6">
+                  <div class="text-4xl font-bold text-primary mb-2">50</div>
+                  <div class="text-text-muted">MW Milestone</div>
+                </div>
+                <div class="bg-white rounded-2xl p-6">
                   <div class="text-4xl font-bold text-primary mb-2">500+</div>
-                  <div class="text-text-muted">MW Installed</div>
+                  <div class="text-text-muted">MW Target (3 Yrs)</div>
                 </div>
                 <div class="bg-white rounded-2xl p-6">
-                  <div class="text-4xl font-bold text-primary mb-2">100+</div>
-                  <div class="text-text-muted">Projects Completed</div>
+                  <div class="text-4xl font-bold text-primary mb-2">100%</div>
+                  <div class="text-text-muted">On-Time Delivery</div>
                 </div>
                 <div class="bg-white rounded-2xl p-6">
-                  <div class="text-4xl font-bold text-primary mb-2">10+</div>
-                  <div class="text-text-muted">States Covered</div>
-                </div>
-                <div class="bg-white rounded-2xl p-6">
-                  <div class="text-4xl font-bold text-primary mb-2">99%</div>
-                  <div class="text-text-muted">Client Satisfaction</div>
+                  <div class="text-4xl font-bold text-primary mb-2">3</div>
+                  <div class="text-text-muted">Core Focus Areas</div>
                 </div>
               </div>
             </div>
 
             <div class="space-y-4">
               {[
-                { name: 'Sumeet Industries', capacity: '30 MW', type: 'Ground Mount' },
-                { name: 'KP Group', capacity: '15 MW', type: 'Solar Park' },
-                { name: 'Reliance Industries', capacity: '10 MW', type: 'Industrial' },
-                { name: 'Filatex', capacity: '2 MW AC / 2.4 MW DC', type: 'Rooftop' },
-                { name: 'Shikhar Prints', capacity: '825 kW AC / 1 MW DC', type: 'Industrial Rooftop' },
+                { name: 'Ground Mount Solar', capacity: '25 MW', type: 'Utility Scale' },
+                { name: 'Industrial Installation', capacity: '15 MW', type: 'C&I Solar' },
+                { name: 'Commercial Rooftop', capacity: '5 MW', type: 'Rooftop Solar' },
+                { name: 'Solar Park Project', capacity: '3 MW', type: 'Grid Connected' },
+                { name: 'Captive Power', capacity: '2 MW', type: 'Industrial' },
               ].map((project, index) => (
                 <div class="group flex items-center gap-6 bg-white rounded-2xl p-6 hover:bg-solar-green/5 hover:border-solar-green/20 border border-transparent transition-all duration-300">
                   <div class="w-12 h-12 bg-gradient-to-br from-solar-green to-highlight-green rounded-xl flex items-center justify-center text-white font-bold">
@@ -755,10 +755,10 @@ export const HomePage = () => {
           <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
             <i class="fas fa-clock text-2xl"></i>
             <p class="font-semibold">
-              <span class="text-yellow-200">Limited Time:</span> Government Subsidy up to 40% — Slots filling fast for 2026!
+              <span class="text-yellow-200">Growth Target:</span> 500+ MW solar capacity within 3 years — Partner with us today!
             </p>
             <a href="/contact" class="px-6 py-2 bg-white text-red-500 font-bold rounded-full hover:bg-yellow-100 transition-colors">
-              Claim Your Subsidy
+              Get Started
             </a>
           </div>
         </div>

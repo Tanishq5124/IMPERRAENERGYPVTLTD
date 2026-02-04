@@ -14,11 +14,11 @@ export const ServicesPage = () => {
               Our Services
             </span>
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-              Comprehensive
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-solar-green to-highlight-green"> Energy Solutions</span>
+              End-to-End
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-solar-green to-highlight-green"> Lifecycle Services</span>
             </h1>
             <p class="text-xl text-gray-300 leading-relaxed">
-              From concept to commissioning, we deliver end-to-end renewable energy solutions tailored to your business needs.
+              Engineering & design, procurement, project management, installation & commissioning, and performance optimization — tailored to your energy needs, site conditions, and financial objectives.
             </p>
           </div>
         </div>
@@ -32,17 +32,17 @@ export const ServicesPage = () => {
             <div class="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <span class="inline-block px-4 py-2 bg-solar-green/10 text-solar-green text-sm font-semibold rounded-full mb-6">
-                  Utility Scale
+                  Core Focus Area
                 </span>
                 <h2 class="text-4xl font-display font-bold text-primary mb-6">
-                  Solar Park EPC
+                  Ground-Mounted Solar
                 </h2>
                 <p class="text-lg text-text-muted mb-8 leading-relaxed">
-                  Large-scale, grid-connected solar park projects designed for strong financial returns. We handle everything from land acquisition to grid connectivity.
+                  Large-scale solar infrastructure development with comprehensive lifecycle services from engineering design through performance optimization.
                 </p>
                 
                 <div class="space-y-4 mb-8">
-                  {['Site assessment & land acquisition', 'Engineering design & procurement', 'Construction & installation', 'Grid connectivity & commissioning', 'Performance monitoring systems'].map((item) => (
+                  {['Engineering & design', 'Procurement & project management', 'Installation & commissioning', 'Performance optimization', 'Long-term asset management'].map((item) => (
                     <div class="flex items-center gap-3">
                       <i class="fas fa-check-circle text-solar-green"></i>
                       <span class="text-text-main">{item}</span>
@@ -58,8 +58,8 @@ export const ServicesPage = () => {
               <div class="bg-bg-light rounded-3xl p-10">
                 <div class="text-center">
                   <i class="fas fa-solar-panel text-8xl text-solar-green mb-6"></i>
-                  <div class="text-5xl font-bold text-primary mb-2">300+ MW</div>
-                  <div class="text-text-muted">Installed Capacity</div>
+                  <div class="text-5xl font-bold text-primary mb-2">50 MW</div>
+                  <div class="text-text-muted">Milestone Achieved</div>
                 </div>
               </div>
             </div>
@@ -71,24 +71,24 @@ export const ServicesPage = () => {
               <div class="order-2 lg:order-1 bg-bg-light rounded-3xl p-10">
                 <div class="text-center">
                   <i class="fas fa-building text-8xl text-primary mb-6"></i>
-                  <div class="text-5xl font-bold text-primary mb-2">50+</div>
-                  <div class="text-text-muted">Rooftop Installations</div>
+                  <div class="text-5xl font-bold text-primary mb-2">500+</div>
+                  <div class="text-text-muted">MW Target (3 Yrs)</div>
                 </div>
               </div>
               
               <div class="order-1 lg:order-2">
                 <span class="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
-                  Commercial & Industrial
+                  Core Focus Area
                 </span>
                 <h2 class="text-4xl font-display font-bold text-primary mb-6">
-                  Industrial & Rooftop Solar
+                  Industrial & Commercial Solar
                 </h2>
                 <p class="text-lg text-text-muted mb-8 leading-relaxed">
-                  Maximize your rooftop potential with custom-designed solar systems that reduce electricity costs and carbon footprint.
+                  Industrial and commercial solar installations designed to reduce carbon emissions, improve energy security, and deliver long-term performance.
                 </p>
                 
                 <div class="space-y-4 mb-8">
-                  {['Structural analysis & design', 'Premium panel installation', 'Inverter & battery systems', 'Net metering setup', 'Real-time monitoring'].map((item) => (
+                  {['Engineering tailored to site conditions', 'Efficient procurement processes', 'On-time installation & commissioning', 'Performance optimization', 'Long-term O&M support'].map((item) => (
                     <div class="flex items-center gap-3">
                       <i class="fas fa-check-circle text-primary"></i>
                       <span class="text-text-main">{item}</span>
@@ -108,17 +108,17 @@ export const ServicesPage = () => {
             <div class="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <span class="inline-block px-4 py-2 bg-solar-green/10 text-solar-green text-sm font-semibold rounded-full mb-6">
-                  Self-Generation
+                  Core Focus Area
                 </span>
                 <h2 class="text-4xl font-display font-bold text-primary mb-6">
-                  Captive Solar Solutions
+                  Large-Scale Solar Infrastructure
                 </h2>
                 <p class="text-lg text-text-muted mb-8 leading-relaxed">
-                  Generate your own power with reduced grid dependence. Enjoy predictable costs and energy security with on-site generation capabilities.
+                  Scalable solar infrastructure development with strong project planning, risk management, and efficient on-site execution.
                 </p>
                 
                 <div class="space-y-4 mb-8">
-                  {['100% energy independence', 'Reduced electricity costs', 'Protection from tariff hikes', 'Enhanced grid reliability', 'Green energy certification'].map((item) => (
+                  {['Strong financial backing', 'Scalable execution systems', 'Regulatory & quality adherence', 'On-time, on-budget delivery', 'Long-term performance focus'].map((item) => (
                     <div class="flex items-center gap-3">
                       <i class="fas fa-check-circle text-solar-green"></i>
                       <span class="text-text-main">{item}</span>
@@ -134,8 +134,8 @@ export const ServicesPage = () => {
               <div class="bg-bg-light rounded-3xl p-10">
                 <div class="text-center">
                   <i class="fas fa-industry text-8xl text-solar-green mb-6"></i>
-                  <div class="text-5xl font-bold text-primary mb-2">40%</div>
-                  <div class="text-text-muted">Average Cost Savings</div>
+                  <div class="text-5xl font-bold text-primary mb-2">100%</div>
+                  <div class="text-text-muted">On-Time Delivery</div>
                 </div>
               </div>
             </div>

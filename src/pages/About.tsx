@@ -14,11 +14,11 @@ export const AboutPage = () => {
               About Imperra Energy
             </span>
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-              Driving India's Energy
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-solar-green to-highlight-green"> Transformation</span>
+              Powering India's
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-solar-green to-highlight-green"> Solar Future</span>
             </h1>
             <p class="text-xl text-gray-300 leading-relaxed">
-              Imperra Energy is driving India's transition toward sustainable power with innovative solar and thermal energy solutions. Backed by decades of sectoral expertise and a leadership team with over 30 years of combined experience.
+              Imperra Energy Pvt. Ltd. is a fast-scaling solar EPC and energy solutions company formed as a strategic joint venture between two established industry groups. We accelerate adoption of reliable, high-performance solar energy systems through strong engineering, efficient execution, and long-term sustainability.
             </p>
           </div>
         </div>
@@ -35,7 +35,7 @@ export const AboutPage = () => {
               </div>
               <h2 class="text-3xl font-display font-bold text-primary mb-4">Our Vision</h2>
               <p class="text-lg text-text-muted leading-relaxed">
-                Enable industries to adopt cleaner, cost-effective, and reliable energy solutions that power growth while protecting our planet for future generations.
+                Become a leading solar energy player delivering high-performance, scalable, sustainable solutions that power India's energy transition and create long-term value.
               </p>
             </div>
 
@@ -46,7 +46,7 @@ export const AboutPage = () => {
               </div>
               <h2 class="text-3xl font-display font-bold text-primary mb-4">Our Mission</h2>
               <p class="text-lg text-text-muted leading-relaxed">
-                Deliver intelligent, technology-first energy solutions with long-term client success, combining engineering excellence with innovative approaches.
+                Provide cost-effective, reliable, and efficient solar power systems delivering long-term client value, energy security, and environmental sustainability.
               </p>
             </div>
           </div>
@@ -62,23 +62,23 @@ export const AboutPage = () => {
                 Our Journey
               </span>
               <h2 class="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
-                Two Decades of Energy Excellence
+                Strategic Growth Journey
               </h2>
               <p class="text-lg text-text-muted mb-6 leading-relaxed">
-                Founded with a vision to transform India's energy landscape, Imperra Energy has grown from a small engineering firm to one of the most trusted names in renewable energy infrastructure.
+                Formed as a strategic joint venture between two established industry groups, Imperra Energy combines deep industry expertise with strong financial backing to deliver reliable, high-performance solar energy systems.
               </p>
               <p class="text-lg text-text-muted mb-8 leading-relaxed">
-                Our journey is marked by continuous innovation, unwavering commitment to quality, and a deep understanding of the unique challenges faced by Indian industries in their energy transition.
+                Our growth strategy targets over 500 MW of solar capacity within the next three years, supported by experienced technical leadership, scalable project execution systems, and commitment to innovation and sustainability.
               </p>
               
               <div class="grid grid-cols-2 gap-6">
                 <div class="bg-white rounded-2xl p-6 shadow-lg">
-                  <div class="text-4xl font-bold text-solar-green mb-2">20+</div>
-                  <div class="text-text-muted">Years of Expertise</div>
+                  <div class="text-4xl font-bold text-solar-green mb-2">50</div>
+                  <div class="text-text-muted">MW Milestone</div>
                 </div>
                 <div class="bg-white rounded-2xl p-6 shadow-lg">
-                  <div class="text-4xl font-bold text-solar-green mb-2">30+</div>
-                  <div class="text-text-muted">Leadership Experience</div>
+                  <div class="text-4xl font-bold text-solar-green mb-2">500+</div>
+                  <div class="text-text-muted">MW Target (3 Yrs)</div>
                 </div>
               </div>
             </div>
@@ -86,9 +86,9 @@ export const AboutPage = () => {
             <div class="relative">
               <div class="aspect-square rounded-3xl bg-gradient-to-br from-solar-green/20 to-highlight-green/10 flex items-center justify-center">
                 <div class="text-center">
-                  <i class="fas fa-history text-9xl text-solar-green/50 mb-6"></i>
-                  <div class="text-2xl font-bold text-primary">Since 2004</div>
-                  <div class="text-text-muted">Pioneering Renewable Energy</div>
+                  <i class="fas fa-rocket text-9xl text-solar-green/50 mb-6"></i>
+                  <div class="text-2xl font-bold text-primary">Strategic JV</div>
+                  <div class="text-text-muted">Fast-Scaling Solar EPC</div>
                 </div>
               </div>
             </div>
@@ -108,12 +108,11 @@ export const AboutPage = () => {
             </h2>
           </div>
 
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="grid md:grid-cols-3 gap-8">
             {[
-              { icon: 'fa-award', title: 'Excellence', desc: 'Striving for the highest standards in every project' },
-              { icon: 'fa-handshake', title: 'Integrity', desc: 'Building trust through transparent partnerships' },
-              { icon: 'fa-lightbulb', title: 'Innovation', desc: 'Embracing new technologies and approaches' },
-              { icon: 'fa-leaf', title: 'Sustainability', desc: 'Committed to environmental responsibility' },
+              { icon: 'fa-lightbulb', title: 'Innovation', desc: 'Driving technological advancement and continuous improvement in solar energy systems' },
+              { icon: 'fa-leaf', title: 'Sustainability', desc: 'Reducing carbon emissions, improving energy security, and delivering long-term performance' },
+              { icon: 'fa-tachometer-alt', title: 'Efficiency', desc: 'Maximizing project execution efficiency with strong planning and risk management' },
             ].map((value) => (
               <div class="group text-center p-8 rounded-3xl border border-gray-100 hover:border-solar-green/30 hover:shadow-xl transition-all duration-300">
                 <div class="w-20 h-20 bg-gradient-to-br from-solar-green/20 to-highlight-green/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -144,10 +143,10 @@ export const AboutPage = () => {
 
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
-              { number: '500+', label: 'MW Installed', icon: 'fa-bolt', desc: 'Total solar capacity deployed across India' },
-              { number: '100+', label: 'Projects Delivered', icon: 'fa-solar-panel', desc: 'Successfully commissioned projects' },
-              { number: '20+', label: 'Years Experience', icon: 'fa-award', desc: 'Industry expertise since 2004' },
-              { number: '99%', label: 'Client Satisfaction', icon: 'fa-star', desc: 'Based on 127 verified reviews' },
+              { number: '50', label: 'MW Milestone', icon: 'fa-bolt', desc: 'Demonstrating execution capability' },
+              { number: '500+', label: 'MW Target', icon: 'fa-rocket', desc: 'Growth target within 3 years' },
+              { number: '100%', label: 'On-Time Delivery', icon: 'fa-clock', desc: 'Committed to on-budget execution' },
+              { number: '3', label: 'Core Focus Areas', icon: 'fa-crosshairs', desc: 'Ground-mount, Industrial, Large-scale' },
             ].map((stat) => (
               <div class="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                 <div class="w-16 h-16 bg-gradient-to-br from-solar-green to-highlight-green rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -163,9 +162,9 @@ export const AboutPage = () => {
           {/* Additional Highlights */}
           <div class="grid md:grid-cols-3 gap-8">
             {[
-              { title: 'MNRE Empanelled', icon: 'fa-certificate', desc: 'Government certified for solar installations' },
-              { title: 'ISO 9001:2015', icon: 'fa-shield-alt', desc: 'Quality management system certified' },
-              { title: '10+ States', icon: 'fa-map-marked-alt', desc: 'Pan-India presence and service network' },
+              { title: 'Expert Team', icon: 'fa-users', desc: 'Solar engineers, project managers, and technical specialists' },
+              { title: 'Strong Planning', icon: 'fa-tasks', desc: 'Rigorous project planning and risk management' },
+              { title: 'Quality Adherence', icon: 'fa-shield-alt', desc: 'Regulatory compliance and quality standards' },
             ].map((item) => (
               <div class="flex items-start gap-4 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div class="w-12 h-12 bg-solar-green/10 rounded-xl flex items-center justify-center flex-shrink-0">
